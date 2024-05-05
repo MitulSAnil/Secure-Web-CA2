@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="clearInputs()">
+    <div class="container">
+        <div id="loginPanel">
+            <h1>Login</h1>
+            <div class="form-container">
+                <form id="loginForm" class="form-box">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" placeholder="Enter username">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" placeholder="Enter password">
+                    <button type="button" onclick="login()">Login</button>
+                </form>
+            </div>
+        </div>
+        <button type="button" id="logoutBtn" onclick="logout()" style="display:none;">Logout</button>
+
+        <div id="teacherPanel" style="display:none;">
+            <h2>Manage Marks</h2>
+            <form id="marksForm">
+                <input type="text" id="studentId" placeholder="Enter student ID">
+                <input type="number" id="marks" placeholder="Enter marks">
+                <button type="button" onclick="addMarks()">Add</button>
+                <button type="button" onclick="editMarks()">Edit</button>
+                <button type="button" onclick="deleteMarks()">Delete</button>
+            </form>
+        </div>
+
+        <div id="studentPanel" style="display:none;">
+            <h2>Your Marks</h2>
+            <div id="studentMarks">
+                <!-- Marks will be displayed here -->
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
